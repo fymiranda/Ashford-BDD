@@ -1,0 +1,17 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+reports
+debug.log
+.idea
+*.iml
+data/**/*.js
+modules/**/*.js
+features/**/*.js
+pages/**/*.js
+step-definitions/**/*.js
+generatedFeatures
+package-lock.json
+script-config/pennytest
+/.vscode/launch.json

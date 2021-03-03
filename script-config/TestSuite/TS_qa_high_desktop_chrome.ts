@@ -1,0 +1,16 @@
+import { Options } from "selenium-webdriver/chrome"
+import { Browser, Config } from "@aaxis/cucumber-selenium"
+
+export const config: Config = {
+    env: 'qa',
+    featureFiles: ['features/*/*.feature'],
+    steps: ['step-definitions/*/*/*.ts'],
+    reportName: 'ashford-cucumber-report-chrome',
+    screenshotOnSuccess: true,
+    screenshotOnError: true,
+    tags: ['@test'],
+    scenarioParallel: 4,
+    chromeOptions: new Options().addArguments('--ignore-certificate-errors', 'allow-running-insecure-content'),
+    //chromeOptions: new Options().headless().addArguments('--ignore-certificate-errors', 'allow-running-insecure-content', '--no-sandbox', '--disable-dev-shm-usage'),
+    browser: Browser.chrome
+}

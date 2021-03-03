@@ -1,0 +1,22 @@
+{
+  "name": "ashford_autotest",
+  "version": "1.0.0",
+  "dependencies": {
+    "@aaxis/cucumber-selenium": "1.0.3",
+    "chai": "^4.2.0",
+    "chromedriver": "^88.0.0",
+    "geckodriver": "^1.21.1",
+    "typescript": "^4.1.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test:sample": "cucumber-selenium run -c script-config/sample.ts",
+    "test:sample-parallel": "cucumber-selenium run-parallel -c script-config/bing-config.ts -c script-config/bing2-config.ts",
+    "generateFeature": "generate-feature --featureDataFiles=./data/dev/bing*.ts --featureFiles=./features/**/*.feature --dist=./generatedFeatures",
+    "nick:debug": "cucumber-selenium run -c ./script-config/nick/nick_debug.ts",
+    "test:finish": "cucumber-selenium run -c script-config/TestSuite/TS_qa_high_desktop_chrome.ts",
+    "nick:test": "cucumber-selenium run -c ./script-config/nick/nick_test.ts",
+    "miranda:test": "cucumber-selenium run -c ./script-config/Miranda/Miranda_test.ts"
+  },
+  "devDependencies": {}
+}
